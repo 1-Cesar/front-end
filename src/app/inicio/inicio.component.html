@@ -1,0 +1,49 @@
+<!-- Seção para Empresa: Postar Vaga -->
+<div class="container mt-5" *ngIf="isEmpresa()">
+  <div class="card">
+    <div class="card-header">
+      <h2 class="text-center">Postar Vaga</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="realizarPostagem()">
+        <div class="form-group mb-3">
+          <label for="titulo">Título da Vaga</label>
+          <input type="text" class="form-control" id="titulo" [(ngModel)]="postagem.titulo" name="titulo" placeholder="Digite o título da vaga" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="texto">Descrição da Vaga</label>
+          <textarea class="form-control" id="texto" [(ngModel)]="postagem.texto" name="texto" rows="3" placeholder="Descreva os detalhes da vaga" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Postar Vaga</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Seção para Visualizar Postagens -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Vagas Disponíveis</h2>
+  <div *ngFor="let postagem of postagens">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ postagem.titulo }}</h5>
+        <p class="card-text">{{ postagem.texto }}</p>
+        <!-- Botão para candidatos se candidatarem, visível apenas para não empresas -->
+        <button *ngIf="!isEmpresa()" (click)="realizarCandidatura(postagem.id)" class="btn btn-primary">Candidatar-se</button>
+        <!-- Botão para exibir candidatos, visível apenas para empresas -->
+        <button *ngIf="isEmpresa()" (click)="exibirCandidatos(postagem.id)" class="btn btn-secondary">Ver Candidatos</button>
+        
+        <!-- Lista para exibir candidatos -->
+        <ul *ngIf="candidaturasExibidas[postagem.id]">
+          <li *ngFor="let candidatura of candidaturasExibidas[postagem.id]">
+            {{ candidatura.emailUsuario }} <!-- Ajuste conforme o nome da propriedade no seu modelo -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

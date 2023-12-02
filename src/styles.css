@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto+Condensed:wght@300;400&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.fs-54 {
+  font-size: 54pt;
+}
+
+.fs-18 {
+  font-size: 18;
+}
+
+.btn-roxo {
+  background-color: #8c52ff !important;
+  color: white !important;
+}
+
+.btn-roxo:hover {
+  background-color: #fff !important;
+  border: 2px solid #8c52ff !important;
+  color: #8c52ff !important;
+}
+
+.btn-verde {
+  background-color: green !important;
+  color: white !important;
+}
+
+.btn-verde:hover {
+  background-color: #fff !important;
+  border: 2px solid green !important;
+  color: green !important;
+}
+
+.btn-vermelho {
+  background-color: red !important;
+  color: white !important;
+}
+
+.btn-vermelho:hover {
+  background-color: #fff !important;
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+.btn-sizing {
+  width: 100px;
+}

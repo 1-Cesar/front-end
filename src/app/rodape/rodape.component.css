@@ -1,0 +1,51 @@
+ul.redes-sociais {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.redes-sociais li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .fa {
+    font-size: 25pt;
+    color: black;
+    padding: 3px;
+  }
+  
+  .fa-linkedin:hover {
+    color: rgb(37, 37, 255);
+  }
+  
+  .fa-github:hover {
+    color: white;
+  }
+  
+  .fa-instagram:hover {
+    color: rgb(190, 76, 0);
+  }
+  
+  .fa-facebook:hover {
+    color: rgb(37, 37, 255);
+  }
+  
+  .fa-youtube:hover {
+    color: rgb(206, 5, 5);
+  }
+  
+  
+  
+  a {
+    margin: 0 15px 0 15px;
+  }
+
+  h5 {
+    color: white;
+  }
+  
+  .fa-twitter:hover {
+    color: #0072b1;
+  }
+  

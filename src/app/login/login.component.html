@@ -1,0 +1,42 @@
+<div class="container-fluid background">
+  <div class="row d-flex align-items-center">
+      <div class="col-md-7 mt-5 p-5">
+          <div class="row mt-5 p-5 d-flex justify-content-center align-items-center">
+              <div class="mt-5 p-5 col-md-12 d-flex justify-content-center">
+                  <div class="mt-5 justify-content-center d-flex align-items-center login-box">
+                      <form>
+                          <h1 class="text-center mb-5">Entrar</h1>
+                          <div class="form-group user-box">
+                              <input [(ngModel)]='userLogin.email' type="email" name="email" class="form-control" id="email" />
+                              <label for="email">E-Mail</label>
+                          </div>
+                          <div class="form-group user-box">
+                              <input [(ngModel)]='userLogin.senha' type="password" name="senha" class="form-control" id="senha" />
+                              <label for="senha">Senha</label>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                              <button type="submit" class="btn btn-roxo" (click)='login()'>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  Entrar
+                              </button>
+                          </div>
+                          <hr class="my-3" />
+                          <p class="text-center">
+                              Não tem uma conta como usuário?
+                              <a class="cadastrar" routerLink="/cadastro-usuario">Cadastre-se como Usuário!</a>
+                          </p>
+                          <p class="text-center">
+                              Ou cadastre sua empresa
+                              <a class="cadastrar" routerLink="/cadastro-empresa">Cadastre sua Empresa</a>
+                          </p>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6"></div>
+  </div>
+</div>

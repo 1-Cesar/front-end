@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center m-5 cadastro-box">
+                <div class="col-md-10">
+                    <hr>
+                    <h1 class="text-center mb-3">Cadastro</h1>
+
+                    <div class="form-group mb-4 user-box">
+                        <input [(ngModel)]='empresa.nome' class="form-control" type="text" name="nome" id="nome">
+                        <label for="nome" style="font-size: 12pt;">Nome da Empresa</label>
+                    </div>
+
+                    <div class="form-group mb-4 user-box">
+                        <input [(ngModel)]='empresa.cnpj' class="form-control" type="text" name="cnpj"
+                            id="cnpj">
+                        <label for="cnpj" style="font-size: 12pt;">CNPJ</label>
+                    </div>
+
+                    <div class="form-group mb-4 user-box">
+                        <input [(ngModel)]='empresa.email' class="form-control" type="email" name="email" id="email">
+                        <label for="email" style="font-size: 12pt;">Email</label>
+                    </div>
+
+                    <div class="form-group mb-4 user-box">
+                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha"
+                            id="senha">
+                        <label for="senha" style="font-size: 12pt;">Senha</label>
+                    </div>
+
+                    <div class="form-group user-box">
+                        <input [(ngModel)]='empresa.senha' class="form-control" type="password" name="confirmSenha"
+                            id="confirmSenha">
+                        <label for="confirmSenha" style="font-size: 12pt;">Confirmar Senha</label>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-vermelho m-5" style="width: 120px; height: 50px;" routerLink='/login'>Cancelar</button>
+                        <button type="submit" class="btn btn-verde m-5" style="width: 120px; height: 50px;" (click)='cadastrarEmpresa()'>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="img-bg">
+
+        </div>
+    </div>
+</div>
